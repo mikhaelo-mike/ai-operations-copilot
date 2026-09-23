@@ -1,13 +1,11 @@
 from fastapi import FastAPI
 
+from app.api.router import api_router 
+
 app = FastAPI(
     title = "AI Operations Copilot",
     version = "0.1.0",
 )
-
-@app.get("/health")
-def health_check():
-    return {
-        "status" : "Healthy"
-    }
-    
+app.include_router(
+    api_router
+)
