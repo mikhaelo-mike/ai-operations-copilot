@@ -7,6 +7,7 @@ class settings(BaseSettings):
     environment : str = "Development"
     debug : bool = True
     log_level : str = "INFO"
+    database_url: str = "postgresql://postgres:postgres@localhost:5432/ai_operations"
 
     model_config = SettingsConfigDict(
         env_file = ".env",
