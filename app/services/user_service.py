@@ -81,3 +81,4 @@ def remove_user(
     )
 
     return True
+
